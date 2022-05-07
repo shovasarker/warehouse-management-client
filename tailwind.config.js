@@ -5,6 +5,10 @@ module.exports = {
       container: {
         center: true,
       },
+      fontFamily: {
+        logo: ['Great Vibes', 'cursive'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],

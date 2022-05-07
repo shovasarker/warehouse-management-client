@@ -1,9 +1,9 @@
+import Header from './pages/shared/header/Header'
+
 function App() {
   return (
-    <div>
-      <h1 className='text-center text-4xl font-bold text-blue-500'>
-        Hello World
-      </h1>
+    <div className='font-poppins'>
+      <Header />
     </div>
   )
 }
