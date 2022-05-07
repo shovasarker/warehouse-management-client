@@ -25,7 +25,7 @@ const GoogleSignIn = () => {
   return (
     <Button outlined full primary onClick={handleGoogleSignIn}>
       {loading ? (
-        <Spinner small />
+        <Spinner small primary />
       ) : (
         <>
           <FcGoogle className='w-5 h-5' />

@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from 'react'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from 'react-firebase-hooks/auth'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import auth from '../../../firebase/firebase.init'
-import Button from '../../standalone/Button'
-import Input from '../../standalone/Input'
-import MessageLink from '../../standalone/MessageLink'
-import Spinner from '../../standalone/Spinner'
-import Title from '../../standalone/Title'
+import auth from '../../../../firebase/firebase.init'
+import Button from '../../../standalone/Button'
+import Input from '../../../standalone/Input'
+import MessageLink from '../../../standalone/MessageLink'
+import Spinner from '../../../standalone/Spinner'
+import Title from '../../../standalone/Title'
 
-const EmailSignIn = () => {
+const EmailSignUp = () => {
   const navigate = useNavigate()
   const [error, setError] = useState('')
-  const [signInWithEmailAndPassword, user, loading, emailError] =
-    useSignInWithEmailAndPassword(auth)
+  const [createUserWithEmailAndPassword, user, loading, emailError] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
+
+  const [updateProfile] = useUpdateProfile(auth)
 
   useEffect(() => {
     if (user && !error && !emailError) {
-      toast.success('Successfully Signed in With Email and Password')
+      toast.success('Successfully Created User With Email and Password')
       return
     }
     if (error && !emailError) {
@@ -45,8 +50,15 @@ const EmailSignIn = () => {
       setError('Email is Not Valid, Please Enter a Valid Email')
       return
     }
+
+    if (data.password !== data.confirmPassword) {
+      setError("Passwords didn't matched")
+      return
+    }
     setError('')
-    await signInWithEmailAndPassword(data.email, data.password)
+    await createUserWithEmailAndPassword(data.email, data.password)
+    await updateProfile({ displayName: data?.name })
+    toast?.success('Profile Updated')
   }
 
   return (
@@ -54,7 +66,15 @@ const EmailSignIn = () => {
       className={`w-full md:w-[450px] mx-auto`}
       onSubmit={handleSubmit(onSubmit)}
     >
-      <Title center title='Sign In' />
+      <Title center title='Sign Up' />
+      <Input
+        type={'text'}
+        id='name'
+        label={'Name'}
+        register={register}
+        required
+        error={errors.name?.type === 'required' && 'Email is Required'}
+      />
       <Input
         type={'email'}
         id='email'
@@ -77,17 +97,31 @@ const EmailSignIn = () => {
               'Pasword Must be Atlesat 6 Characters Long'
         }
       />
+      <Input
+        type={'password'}
+        id='confirmPassword'
+        label={'Confirm Password'}
+        register={register}
+        required
+        minLength={6}
+        error={
+          errors.confirmPassword?.type === 'required'
+            ? 'Confirm Password is Required'
+            : errors.confirmPassword?.type === 'minLength' &&
+              'Pasword Must be Atlesat 6 Characters Long'
+        }
+      />
 
       <Button type='submit' full primary className={'mt-5'}>
         {loading ? <Spinner small /> : <>Sign In</>}
       </Button>
       <MessageLink
-        message={'New to Skyline ?'}
-        onClick={() => navigate('/signup')}
-        value={'Create an account'}
+        message={'Already have an account ?'}
+        onClick={() => navigate('/signin')}
+        value={'Sign In'}
       />
     </form>
   )
 }
 
-export default EmailSignIn
+export default EmailSignUp

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Spinner = ({ center, small }) => {
+const Spinner = ({ center, small, primary, darker }) => {
   return (
     <div
       className={`${
@@ -10,7 +10,13 @@ const Spinner = ({ center, small }) => {
       <div
         className={`${
           small ? 'w-5 h-5' : 'w-8 h-8'
-        } rounded-full border-[3px] border-gray-500 border-b-transparent animate-spin`}
+        } rounded-full border-[3px] ${
+          primary
+            ? 'border-teal-500'
+            : darker
+            ? 'border-white'
+            : 'border-gray-400'
+        }  border-b-transparent animate-spin`}
       ></div>
     </div>
   )
