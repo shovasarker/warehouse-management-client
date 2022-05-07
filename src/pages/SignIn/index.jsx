@@ -1,31 +1,27 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import Input from '../standalone/Input'
+import React, { useEffect } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { useLocation, useNavigate } from 'react-router-dom'
+import auth from '../../firebase/firebase.init'
+import EmailSignIn from '../shared/EmailSignIn'
+import SocialLogin from '../shared/sociallogin/SocialLogin'
 
 const SignIn = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm()
-  const onSubmit = (data) => {
-    console.log(data)
-    console.log(errors)
-  }
+  const navigate = useNavigate()
+  const location = useLocation()
+  const from = location?.state?.from?.pathname || '/'
+  const [user] = useAuthState(auth)
+
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true })
+    }
+  }, [user, navigate, from])
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Input
-        type={'email'}
-        id='email'
-        label={'Email'}
-        register={register}
-        required
-        error={errors.firstname?.type === 'required' && 'Email is Required'}
-      />
-
-      <input type='submit' value={'Submit'} />
-    </form>
+    <div className='container px-6'>
+      <EmailSignIn />
+      <SocialLogin />
+    </div>
   )
 }
 

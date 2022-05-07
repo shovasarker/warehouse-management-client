@@ -1,6 +1,16 @@
 import React from 'react'
 
-const Input = ({ type, id, label, register, error, required, className }) => {
+const Input = ({
+  type,
+  id,
+  label,
+  register,
+  error,
+  required,
+  pattern,
+  minLength,
+  className,
+}) => {
   return (
     <div>
       <div className='relative w-full font-medium  mt-5'>
@@ -8,7 +18,7 @@ const Input = ({ type, id, label, register, error, required, className }) => {
           type={type}
           id={id}
           placeholder={label}
-          {...register(id, { required })}
+          {...register(id, { required, pattern, minLength })}
           className={` w-full peer px-4 py-2 border ${
             error ? 'border-red-600' : 'border-gray-300'
           }  bg-transparent placeholder:text-transparent outline-none focus:outline-none ${

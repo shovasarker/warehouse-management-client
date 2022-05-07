@@ -2,6 +2,7 @@ import React from 'react'
 
 const Button = ({
   children,
+  type = 'button',
   onClick,
   className,
   outlined,
@@ -12,7 +13,10 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      className={`${full ? 'w-full' : 'w-auto'} ${
+      type={type}
+      className={`${
+        full ? 'w-full' : 'w-auto'
+      } flex justify-center items-center gap-2 ${
         small ? 'px-2 py-1 text-sm' : 'px-4 py-2'
       } border ${
         outlined
