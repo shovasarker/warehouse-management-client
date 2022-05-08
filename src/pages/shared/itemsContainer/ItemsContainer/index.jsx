@@ -7,7 +7,7 @@ const ItemsContainer = ({ items, perPage }) => {
       {items
         ?.filter((item, i) => (perPage ? i < perPage : i >= 0))
         ?.map(({ _id, ...otherProps }) => (
-          <ItemsCard key={_id} {...otherProps} />
+          <ItemsCard key={_id} id={_id} {...otherProps} />
         ))}
     </div>
   )

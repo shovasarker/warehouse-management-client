@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from '../../../../standalone/Button'
 
 const ItemsCard = ({
+  id,
   name,
   description,
   price,
@@ -10,6 +12,8 @@ const ItemsCard = ({
   Supplier,
   img,
 }) => {
+  const navigate = useNavigate()
+
   return (
     <div className='card relative overflow-hidden rounded cursor-pointer'>
       <img src={img} alt={name} className='w-full aspect-[3/4] object-cover' />
@@ -32,7 +36,12 @@ const ItemsCard = ({
         <p className='mt-3 text-base'>
           Quantity: <span className='ml-2 font-bold'>{quantity}</span>
         </p>
-        <Button primary full className={'mt-auto'}>
+        <Button
+          primary
+          full
+          className={'mt-auto'}
+          onClick={() => navigate(`/inventory/${id}`)}
+        >
           Stock Update
         </Button>
       </div>
