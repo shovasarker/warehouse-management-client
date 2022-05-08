@@ -55,3 +55,4 @@
 9. react-toastify (for showing toast)
 10. recharts (for making charts in the Statictics Section)
 11. axios (for fetching data from server)
+12. react-helmet-async (for dynamically adding title to every page)

@@ -22,9 +22,9 @@ const ItemsCard = ({
         alt={name}
         className='w-full aspect-[3/4] lg:aspect-[4/6] xl:aspect-[3/4] object-cover'
       />
-      <div className='details absolute top-[85%] xl:top-[87%] text-gray-600 bg-white/70 w-full h-full px-4 py-5 transition-all duration-500 flex flex-col items-start'>
+      <div className='details absolute top-[82%] xl:top-[87%] text-gray-600 bg-white/70 w-full h-full px-4 py-5 transition-all duration-500 flex flex-col items-start'>
         <h4 className='text-xl font-bold uppercase'>{name}</h4>
-        <p className='mt-5 tracking-wider'>
+        <p className='mt-8 tracking-wider'>
           {description.length > 100
             ? description?.slice(0, 100) + ' . . .'
             : description}
@@ -38,7 +38,7 @@ const ItemsCard = ({
         <p className='mt-3 text-base'>
           Supplier: <span className='ml-2 font-bold'>{Supplier}</span>
         </p>
-        <p className='mt-3 text-base'>
+        <p className='mt-3 mb-2 text-base'>
           Quantity:{' '}
           <span className='ml-2 font-bold'>
             {quantity === 0 ? 'Out of Stock' : quantity}

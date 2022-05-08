@@ -15,43 +15,99 @@ import AddItem from './pages/AddItem'
 import MyItems from './pages/MyItems'
 import Footer from './pages/shared/Footer'
 import BrandsItem from './pages/BrandsItem'
+import PageHelmet from './pages/standalone/PageHelmet'
 
 function App() {
   return (
     <div className='font-poppins'>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/manage-inventory' element={<ManageInventories />} />
+        <Route
+          path='/'
+          element={
+            <PageHelmet title={'Home'}>
+              <Home />
+            </PageHelmet>
+          }
+        />
+        <Route
+          path='/manage-inventory'
+          element={
+            <PageHelmet title={'Manage Inventories'}>
+              <ManageInventories />
+            </PageHelmet>
+          }
+        />
         <Route
           path='/inventory/:id'
           element={
-            <RequireAuth>
-              <ManageItem />
-            </RequireAuth>
+            <PageHelmet title={'Manage Item'}>
+              <RequireAuth>
+                <ManageItem />
+              </RequireAuth>
+            </PageHelmet>
           }
         />
         <Route
           path='/additem'
           element={
-            <RequireAuth>
-              <AddItem />
-            </RequireAuth>
+            <PageHelmet title={'Add Item'}>
+              <RequireAuth>
+                <AddItem />
+              </RequireAuth>
+            </PageHelmet>
           }
         />
         <Route
           path='/myitems'
           element={
-            <RequireAuth>
-              <MyItems />
-            </RequireAuth>
+            <PageHelmet title={'My Items'}>
+              <RequireAuth>
+                <MyItems />
+              </RequireAuth>
+            </PageHelmet>
           }
         />
-        <Route path='/brand/:brandName' element={<BrandsItem />} />
-        <Route path='/signin' element={<SignIn />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='*' element={<NotFound />} />
+        <Route
+          path='/brand/:brandName'
+          element={
+            <PageHelmet title={'Brands Item'}>
+              <BrandsItem />
+            </PageHelmet>
+          }
+        />
+        <Route
+          path='/signin'
+          element={
+            <PageHelmet title={'Sign in'}>
+              <SignIn />
+            </PageHelmet>
+          }
+        />
+        <Route
+          path='/signup'
+          element={
+            <PageHelmet title={'Sign Up'}>
+              <SignUp />
+            </PageHelmet>
+          }
+        />
+        <Route
+          path='/blogs'
+          element={
+            <PageHelmet title={'Blogs'}>
+              <Blogs />
+            </PageHelmet>
+          }
+        />
+        <Route
+          path='*'
+          element={
+            <PageHelmet title={'Not Found'}>
+              <NotFound />
+            </PageHelmet>
+          }
+        />
       </Routes>
       <Footer />
       <ToastContainer />
