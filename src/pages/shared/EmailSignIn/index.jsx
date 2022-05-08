@@ -15,6 +15,11 @@ const EmailSignIn = () => {
   const [error, setError] = useState('')
   const [signInWithEmailAndPassword, user, loading, emailError] =
     useSignInWithEmailAndPassword(auth)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
 
   useEffect(() => {
     if (user && !error && !emailError) {
@@ -31,11 +36,6 @@ const EmailSignIn = () => {
     }
   }, [user, error, emailError])
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm()
   const onSubmit = async (data) => {
     if (
       !/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(

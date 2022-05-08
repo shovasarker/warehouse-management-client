@@ -17,7 +17,7 @@ const Items = () => {
   return (
     <div className='container px-6 my-10'>
       <Title center title={'Cars Available in our Inventory'} />
-      <ItemsContainer items={items} perPage={6} />
+      <ItemsContainer items={items} perPage={6} home />
       <Button
         primary
         className={'mx-auto my-8'}

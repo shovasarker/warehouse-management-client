@@ -13,7 +13,7 @@ const Input = ({
 }) => {
   return (
     <div>
-      <div className='relative w-full font-medium mt-5 text-gray-600'>
+      <div className='relative w-full font-medium text-gray-600'>
         <input
           type={type}
           id={id}

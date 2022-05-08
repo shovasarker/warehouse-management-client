@@ -11,17 +11,22 @@ const ItemsCard = ({
   brand,
   Supplier,
   img,
+  children,
 }) => {
   const navigate = useNavigate()
 
   return (
     <div className='card relative overflow-hidden rounded cursor-pointer'>
-      <img src={img} alt={name} className='w-full aspect-[3/4] object-cover' />
+      <img
+        src={img}
+        alt={name}
+        className='w-full aspect-[3/4] lg:aspect-[4/6] xl:aspect-[3/4] object-cover'
+      />
       <div className='details absolute top-[85%] xl:top-[87%] text-gray-600 bg-white/70 w-full h-full px-4 py-5 transition-all duration-500 flex flex-col items-start'>
         <h4 className='text-xl font-bold uppercase'>{name}</h4>
         <p className='mt-5 tracking-wider'>
-          {description.length > 200
-            ? description?.slice(0, 200) + ' . . .'
+          {description.length > 100
+            ? description?.slice(0, 100) + ' . . .'
             : description}
         </p>
         <p className='mt-3 text-base'>
@@ -34,7 +39,10 @@ const ItemsCard = ({
           Supplier: <span className='ml-2 font-bold'>{Supplier}</span>
         </p>
         <p className='mt-3 text-base'>
-          Quantity: <span className='ml-2 font-bold'>{quantity}</span>
+          Quantity:{' '}
+          <span className='ml-2 font-bold'>
+            {quantity === 0 ? 'Out of Stock' : quantity}
+          </span>
         </p>
         <Button
           primary
@@ -44,6 +52,7 @@ const ItemsCard = ({
         >
           Stock Update
         </Button>
+        {children}
       </div>
     </div>
   )
