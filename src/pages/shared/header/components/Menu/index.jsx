@@ -19,7 +19,7 @@ const Menu = () => {
     <div
       className={`absolute lg:static left-1/2 -translate-x-1/2 lg:translate-x-0 ${
         menu ? 'top-20' : '-top-full'
-      } bg-white lg:bg-transparent w-full lg:w-auto flex flex-col lg:flex-row items-center lg:justify-end gap-2 py-5 lg:py-0 transition-all duration-500`}
+      } bg-white lg:bg-transparent w-full lg:w-auto flex flex-col lg:flex-row items-center lg:justify-end gap-2 py-5 lg:py-0 transition-all duration-500 z-30`}
     >
       {links?.map(([to, item], i) => (
         <CustomLink to={to} key={i} onClick={() => setMenu(false)}>

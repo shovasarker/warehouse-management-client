@@ -20,7 +20,7 @@ const Banner = () => {
   }, [])
 
   return (
-    <div>
+    <div className='z-10'>
       <Splide
         aria-label='Banner'
         options={{

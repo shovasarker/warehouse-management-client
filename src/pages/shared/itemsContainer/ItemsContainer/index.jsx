@@ -27,7 +27,7 @@ const ItemsContainer = ({ items, setItems, perPage, home }) => {
   return (
     <>
       {items?.length > 0 ? (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-16 my-10'>
           {items
             ?.filter((item, i) => (perPage ? i < perPage : i >= 0))
             ?.map(({ _id, ...otherProps }) => (

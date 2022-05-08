@@ -84,66 +84,72 @@ const ManageItem = () => {
 
   return (
     <main className='container px-6 my-10'>
-      <div className='w-full flex flex-col lg:flex-row-reverse justify-start lg:justify-between items-start gap-5'>
-        <div className='w-full lg:w-2/5 flex flex-col justify-start items-start lg:items-end'>
-          <img
-            src={img}
-            alt={name}
-            className='w-full aspect-[16/9] object-cover'
-          />
-
-          <Button
-            outlined
-            className={'mt-5'}
-            onClick={() => navigate('/manage-inventory')}
-          >
-            Manage Inventories
-          </Button>
-        </div>
-
-        <div className='w-full lg:w-1/2 text-gray-600'>
-          <h3 className='text-2xl font-bold tracking-wider'>{name}</h3>
-          <p className='mt-4 font-medium'>{description}</p>
-          <p className='mt-3 '>
-            Brand Name : <span className='ml-2 font-bold'>{brand}</span>
-          </p>
-          <p className='mt-3 '>
-            Supplier Name : <span className='ml-2 font-bold'>{Supplier}</span>
-          </p>
-          <p className='mt-3 '>
-            Price : <span className='ml-2 font-bold'>${price}</span>
-          </p>
-          <p className='mt-3 '>
-            Quantity :{' '}
-            <span className='ml-2 font-bold'>
-              {quantity === 0 ? 'Out of Stock' : quantity}
-            </span>
-          </p>
-
-          <Button primary className={'mt-4'} onClick={handleUpdateQuantity}>
-            {updateLoading ? <Spinner small /> : <> Delivered</>}
-          </Button>
-
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className='w-full mt-5 px-5 py-4 border border-teal-200'
-          >
-            <Input
-              type={'number'}
-              id='quantity'
-              label={'Quantity'}
-              register={register}
-              required
-              error={
-                errors.email?.type === 'required' && 'Quantity is Required'
-              }
+      {Object.keys(item).length > 0 ? (
+        <div className='w-full flex flex-col lg:flex-row-reverse justify-start lg:justify-between items-start gap-5'>
+          <div className='w-full lg:w-2/5 flex flex-col justify-start items-start lg:items-end'>
+            <img
+              src={img}
+              alt={name}
+              className='w-full aspect-[16/9] object-cover'
             />
-            <Button outlined primary type='submit'>
-              {stockLoading ? <Spinner small primary /> : <>Restock</>}
+
+            <Button
+              outlined
+              className={'mt-5'}
+              onClick={() => navigate('/manage-inventory')}
+            >
+              Manage Inventories
             </Button>
-          </form>
+          </div>
+
+          <div className='w-full lg:w-1/2 text-gray-600'>
+            <h3 className='text-2xl font-bold tracking-wider'>{name}</h3>
+            <p className='mt-4 font-medium'>{description}</p>
+            <p className='mt-3 '>
+              Brand Name : <span className='ml-2 font-bold'>{brand}</span>
+            </p>
+            <p className='mt-3 '>
+              Supplier Name : <span className='ml-2 font-bold'>{Supplier}</span>
+            </p>
+            <p className='mt-3 '>
+              Price : <span className='ml-2 font-bold'>${price}</span>
+            </p>
+            <p className='mt-3 '>
+              Quantity :{' '}
+              <span className='ml-2 font-bold'>
+                {quantity === 0 ? 'Out of Stock' : quantity}
+              </span>
+            </p>
+
+            <Button primary className={'mt-4'} onClick={handleUpdateQuantity}>
+              {updateLoading ? <Spinner small /> : <> Delivered</>}
+            </Button>
+
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className='w-full mt-5 px-5 py-4 border border-teal-200'
+            >
+              <Input
+                type={'number'}
+                id='quantity'
+                label={'Quantity'}
+                register={register}
+                required
+                error={
+                  errors.email?.type === 'required' && 'Quantity is Required'
+                }
+              />
+              <Button outlined primary type='submit'>
+                {stockLoading ? <Spinner small primary /> : <>Restock Item</>}
+              </Button>
+            </form>
+          </div>
         </div>
-      </div>
+      ) : (
+        <h2 className='my-20 text-center text-gray-400 font-medium'>
+          Item Not Found
+        </h2>
+      )}
     </main>
   )
 }
