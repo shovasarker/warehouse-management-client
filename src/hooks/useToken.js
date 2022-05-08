@@ -7,11 +7,12 @@ const useToken = (user) => {
   useEffect(() => {
     const getToken = async () => {
       if (!user) return
-      const { data } = await axios.post('http://localhost:5000/signin', {
-        email: user?.email,
-      })
-
-      console.log(data)
+      const { data } = await axios.post(
+        'https://wmss-server.herokuapp.com/signin',
+        {
+          email: user?.email,
+        }
+      )
       localStorage.setItem('accessToken', data?.accessToken)
       setToken(data?.accessToken)
     }

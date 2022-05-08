@@ -28,7 +28,7 @@ const MyItems = () => {
       try {
         setLoading(true)
         const { data } = await axios.get(
-          `http://localhost:5000/item?supplierEmail=${user?.email}`,
+          `https://wmss-server.herokuapp.com/item?supplierEmail=${user?.email}`,
           {
             headers: {
               authorization: `Bearer ${accessToken}`,
