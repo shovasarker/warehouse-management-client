@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import Button from '../../standalone/Button'
 import Input from '../../standalone/Input'
@@ -14,6 +14,7 @@ const ManageItem = () => {
   const [updateLoading, setUpdateLoading] = useState(false)
   const [stockLoading, setStockLoading] = useState(false)
   const { img, name, description, price, brand, Supplier, quantity } = item
+  const navigate = useNavigate()
 
   const {
     register,
@@ -84,13 +85,23 @@ const ManageItem = () => {
   return (
     <main className='container px-6 my-10'>
       <div className='w-full flex flex-col lg:flex-row-reverse justify-start lg:justify-between items-start gap-5'>
-        <img
-          src={img}
-          alt={name}
-          className='w-full lg:w-2/5 aspect-[16/9] object-cover'
-        />
+        <div className='w-full lg:w-2/5 flex flex-col justify-start items-start lg:items-end'>
+          <img
+            src={img}
+            alt={name}
+            className='w-full aspect-[16/9] object-cover'
+          />
 
-        <div className='w-full lg:1/2 text-gray-600'>
+          <Button
+            outlined
+            className={'mt-5'}
+            onClick={() => navigate('/manage-inventory')}
+          >
+            Manage Inventories
+          </Button>
+        </div>
+
+        <div className='w-full lg:w-1/2 text-gray-600'>
           <h3 className='text-2xl font-bold tracking-wider'>{name}</h3>
           <p className='mt-4 font-medium'>{description}</p>
           <p className='mt-3 '>

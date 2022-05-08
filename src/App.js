@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound'
 import ManageInventories from './pages/ManageInventories'
 import ManageItem from './pages/manageitem/ManageItem'
 import RequireAuth from './pages/standalone/RequireAuth'
+import AddItem from './pages/AddItem'
 
 function App() {
   return (
@@ -24,6 +25,14 @@ function App() {
           element={
             <RequireAuth>
               <ManageItem />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path='/additem'
+          element={
+            <RequireAuth>
+              <AddItem />
             </RequireAuth>
           }
         />

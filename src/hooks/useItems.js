@@ -26,7 +26,7 @@ const useItems = () => {
     getItems()
   }, [])
 
-  return [items, loading]
+  return [items, loading, setItems]
 }
 
 export default useItems
