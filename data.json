@@ -6,7 +6,8 @@
     "quantity": 2,
     "brand": "Lamborghini",
     "Supplier": "Lamborghini",
-    "img": "https://i.ibb.co/nj8xYWp/lamborghini-aventador.jpg"
+    "img": "https://i.ibb.co/nj8xYWp/lamborghini-aventador.jpg",
+    "supplierEmail": "lamborghini@gmail.com"
   },
   {
     "name": "Lamborghini Huracan EVO",
@@ -15,7 +16,8 @@
     "quantity": 5,
     "brand": "Lamborghini",
     "Supplier": "Lamborghini",
-    "img": "https://i.ibb.co/Qnc7wDB/lamborghini-huracan.jpg"
+    "img": "https://i.ibb.co/Qnc7wDB/lamborghini-huracan.jpg",
+    "supplierEmail": "lamborghini@gmail.com"
   },
   {
     "name": "Ford Mustang 2022",
@@ -24,7 +26,8 @@
     "quantity": 5,
     "brand": "Ford",
     "Supplier": "Ford",
-    "img": "https://i.ibb.co/59hXsvc/ford-mutang-2022.jpg"
+    "img": "https://i.ibb.co/59hXsvc/ford-mutang-2022.jpg",
+    "supplierEmail": "ford@gmail.com"
   },
   {
     "name": "Nissan GT-R",
@@ -33,7 +36,8 @@
     "quantity": 3,
     "brand": "Nissan",
     "Supplier": "Nissan",
-    "img": "https://i.ibb.co/4ZjVNCn/nissan-gtr.jpg"
+    "img": "https://i.ibb.co/4ZjVNCn/nissan-gtr.jpg",
+    "supplierEmail": "nissan@gmail.com"
   },
   {
     "name": "Nissan 350Z",
@@ -42,7 +46,8 @@
     "quantity": 8,
     "brand": "Nissan",
     "Supplier": "Nissan",
-    "img": "https://i.ibb.co/rt9PhJK/nissan-370z.jpg"
+    "img": "https://i.ibb.co/rt9PhJK/nissan-370z.jpg",
+    "supplierEmail": "nissan@gmail.com"
   },
   {
     "name": "Nissan 370Z",
@@ -51,6 +56,7 @@
     "quantity": 2,
     "brand": "Nissan",
     "Supplier": "Nissan",
-    "img": "https://i.ibb.co/0tZFkvn/nissan-370z-item.jpg"
+    "img": "https://i.ibb.co/0tZFkvn/nissan-370z-item.jpg",
+    "supplierEmail": "nissan@gmail.com"
   }
 ]

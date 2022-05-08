@@ -9,7 +9,9 @@ const ItemsContainer = ({ items, setItems, perPage, home }) => {
   const [loading, setLoading] = useState(false)
 
   const handleDeleteItem = async (id) => {
-    setLoading(false)
+    const proceed = window.confirm('Do You want to Delete this Item')
+    if (!proceed) return
+    setLoading(true)
     const { data } = await axios.delete(`http://localhost:5000/item/${id}`)
 
     if (data?.deletedCount > 0) {
