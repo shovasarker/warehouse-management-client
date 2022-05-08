@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Lamborghini Aventador",
+    "description": "The Lamborghini Aventador has 1 Petrol Engine on offer. The Petrol engine is 6498 cc . It is available with Automatic transmission.Depending upon the variant and fuel type the Aventador has a mileage of 7.69 kmpl & Ground clearance of Aventador is 125mm. The Aventador is a 2 seater 12 cylinder car and has length of 4943 mm, width of 2273 mm and a wheelbase of 2700mm.",
+    "price": 1000000,
+    "quantity": 2,
+    "brand": "Lamborghini",
+    "Supplier": "Lamborghini",
+    "img": "https://i.ibb.co/nj8xYWp/lamborghini-aventador.jpg"
+  },
+  {
+    "name": "Lamborghini Huracan EVO",
+    "description": "The Huracan is powered by a 5.2-litre, naturally-aspirated V10 engine. The power figures vary from depending on the variant chosen. The most powerful among them is the Huracan Performante where the same engine produces 640PS of power and 600Nm of torque. This enables the Huracan Performante to reach a 100kmph from a standstill in just 2.9 seconds! ",
+    "price": 600000,
+    "quantity": 5,
+    "brand": "Lamborghini",
+    "Supplier": "Lamborghini",
+    "img": "https://i.ibb.co/Qnc7wDB/lamborghini-huracan.jpg"
+  },
+  {
+    "name": "Ford Mustang 2022",
+    "description": "The Ford Mustang 2022 has 1 Petrol Engine on offer. The Petrol engine is 4999 cc . It is available with Manual transmission. It has 4 Passengers Seats and It's Body type is Coupe.",
+    "price": 60000,
+    "quantity": 5,
+    "brand": "Ford",
+    "Supplier": "Ford",
+    "img": "https://i.ibb.co/59hXsvc/ford-mutang-2022.jpg"
+  },
+  {
+    "name": "Nissan GT-R",
+    "description": "The GT-R packs a 3.8-litre V6 twin-turbocharged petrol, which puts out 570PS of max power at 6800rpm and 637Nm of peak torque. The engine is mated to a 6-speed dual-clutch transmission in an all-wheel-drive setup. The 2+2 seater GT-R sprints from 0-100kmph in less than 3 seconds and can hit a top speed of 315kmph. In terms of features, the Nissan GT-R packs six airbags, 20-inch alloys, Bose audio system with 11 speakers and black, red, ivory or tan leather seats & interior, among others",
+    "price": 400000,
+    "quantity": 3,
+    "brand": "Nissan",
+    "Supplier": "Nissan",
+    "img": "https://i.ibb.co/4ZjVNCn/nissan-gtr.jpg"
+  },
+  {
+    "name": "Nissan 350Z",
+    "description": "The Nissan 350Z has 1 Gas Engine on offer. It is available with 6-speed Manual transmission.Depending upon the variant and fuel type the 350Z has a mileage of 7.69 kmpl & Ground clearance of 350Z is 125mm. The 350Z is a 2 seater 6 cylinder car and has length of 4313 mm, width of 1816 mm and a wheelbase of 2650mm.",
+    "price": 30000,
+    "quantity": 8,
+    "brand": "Nissan",
+    "Supplier": "Nissan",
+    "img": "https://i.ibb.co/rt9PhJK/nissan-370z.jpg"
+  },
+  {
+    "name": "Nissan 370Z",
+    "description": "The Nissan 370Z is equipped with a non-turbocharged 3.7-liter V6 engine paired to either a six-speed manual transmission or a seven-speed automatic transmission. This engine produces 332 horsepower and 270 lb-ft of torque",
+    "price": 1000000,
+    "quantity": 2,
+    "brand": "Nissan",
+    "Supplier": "Nissan",
+    "img": "https://i.ibb.co/0tZFkvn/nissan-370z-item.jpg"
+  }
+]

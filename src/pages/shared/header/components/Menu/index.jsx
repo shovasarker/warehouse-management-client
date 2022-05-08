@@ -8,7 +8,7 @@ import CustomLink from '../../../../standalone/CustomLink'
 
 const links = [
   ['/', 'Home'],
-  ['/manage inventory', 'Manage Inventories'],
+  ['/manage-inventory', 'Manage Inventories'],
   ['/blogs', 'Blogs'],
 ]
 

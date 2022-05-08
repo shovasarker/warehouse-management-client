@@ -3,7 +3,7 @@ import Blog from '../components/Blog'
 
 const Blogs = () => {
   return (
-    <div className='container px-6 grid grid-cols-1 md:grid-cols-2  gap-4 my-5'>
+    <div className='container px-6 grid grid-cols-1 md:grid-cols-2  gap-6 lg:gap-10 my-5'>
       <Blog title={'1. Difference between javascript and nodejs'}>
         <ol className='list-decimal list-outside ml-4 mt-3 space-y-2'>
           <li>

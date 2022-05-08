@@ -113,7 +113,7 @@ const EmailSignUp = () => {
       />
 
       <Button type='submit' full primary className={'mt-5'}>
-        {loading ? <Spinner small /> : <>Sign In</>}
+        {loading ? <Spinner small /> : <>Sign Up</>}
       </Button>
       <MessageLink
         message={'Already have an account ?'}
