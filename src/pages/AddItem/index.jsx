@@ -25,7 +25,6 @@ const AddItem = () => {
       'https://wmss-server.herokuapp.com/item',
       item
     )
-    console.log(data)
     if (data?.insertedId) {
       toast.success('Item added Successfully')
       reset()

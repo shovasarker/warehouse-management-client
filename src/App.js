@@ -14,6 +14,7 @@ import RequireAuth from './pages/standalone/RequireAuth'
 import AddItem from './pages/AddItem'
 import MyItems from './pages/MyItems'
 import Footer from './pages/shared/Footer'
+import BrandsItem from './pages/BrandsItem'
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path='/brand/:brandName' element={<BrandsItem />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/blogs' element={<Blogs />} />
