@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Skyline Enterprise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Live Website url: [https://warehouse-management-ss.web.app/](https://warehouse-management-ss.web.app/)
 
-## Available Scripts
+## Features and Functionality :
 
-In the project directory, you can run:
+- This Project has 10 pages including NotFound Page.
 
-### `npm start`
+  - Home
+  - Manage Inventories
+  - ManageItem
+  - AddItem
+  - MyItems
+  - BrandItems
+  - Blogs
+  - SignIn
+  - SignUp
+  - NotFound
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Every Page Has Two Common Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Header
+  - Footer
 
-### `npm test`
+- Home page has 4 unique sections or components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Banner
+  - Items
+  - Statistics
+  - Brands
 
-### `npm run build`
+- Manage Inventory has one Component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - ItemsContainer which is also common in Items section and BrandItems Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Home page shows Banner and 6 Items , two chart of Statistics and available Brands links.
+- we can go to ManageItem page by clicking Stock Update button in the Items Section or go to ManageInventories page by clicking Manage Inventories button.
+- ManageInventories page shows all the items in a grid
+- ManageItem Page Shows Details About a Particular item and it has two extra component , one is delivered button which reduced the quantity of a item and another is a form for restoking item.
+- Blogs page has Answer's of Four question's.
+- Sigin page is used to signin to website via firebase
+- SignUp page is used to SignUp to website via firebase
+- SignIn and SignUp both contains SocialLogin component which is used to sign in with google.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## List of **Libraries** use For this Project:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. react-router-dom (for routing)
+2. firebase (for authenticating and hosting)
+3. react-firebase-hooks(for using firebase authentication easily)
+4. react-icons (for using icons)
+5. tailwindcss (framework for css)
+6. postcss and autoprefixer
+7. react-splide (for making crousel)
+8. react-hook-form (for form validation)
+9. react-toastify (for showing toast)
+10. recharts (for making charts in the Statictics Section)
+11. axios (for fetching data from server)
