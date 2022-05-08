@@ -37,6 +37,7 @@ const EmailSignIn = () => {
   }, [user, error, emailError])
 
   const onSubmit = async (data) => {
+    // Checking Email Validity
     if (
       !/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(
         data.email

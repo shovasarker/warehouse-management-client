@@ -42,6 +42,7 @@ const EmailSignUp = () => {
     formState: { errors },
   } = useForm()
   const onSubmit = async (data) => {
+    // Checking validity of the Email
     if (
       !/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(
         data.email
@@ -51,6 +52,7 @@ const EmailSignUp = () => {
       return
     }
 
+    // checking if both passwords matched or not
     if (data.password !== data.confirmPassword) {
       setError("Passwords didn't matched")
       return
