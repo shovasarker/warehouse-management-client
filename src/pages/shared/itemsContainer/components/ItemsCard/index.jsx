@@ -13,7 +13,7 @@ const ItemsCard = ({
   return (
     <div className='card relative overflow-hidden rounded cursor-pointer'>
       <img src={img} alt={name} className='w-full aspect-[3/4] object-cover' />
-      <div className='details absolute top-[85%] xl:top-[87%] text-gray-600 bg-white/70 w-full h-full px-4 py-5 transition-all duration-500'>
+      <div className='details absolute top-[85%] xl:top-[87%] text-gray-600 bg-white/70 w-full h-full px-4 py-5 transition-all duration-500 flex flex-col items-start'>
         <h4 className='text-xl font-bold uppercase'>{name}</h4>
         <p className='mt-5 tracking-wider'>
           {description.length > 200
@@ -32,7 +32,7 @@ const ItemsCard = ({
         <p className='mt-3 text-base'>
           Quantity: <span className='ml-2 font-bold'>{quantity}</span>
         </p>
-        <Button primary full className={'mt-5'}>
+        <Button primary full className={'mt-auto'}>
           Stock Update
         </Button>
       </div>

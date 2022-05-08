@@ -3,11 +3,17 @@ import { useNavigate } from 'react-router-dom'
 import useItems from '../../../../hooks/useItems'
 import ItemsContainer from '../../../shared/itemsContainer/ItemsContainer'
 import Button from '../../../standalone/Button'
+import Spinner from '../../../standalone/Spinner'
 import Title from '../../../standalone/Title'
 
 const Items = () => {
-  const [items] = useItems()
+  const [items, loading] = useItems()
   const navigate = useNavigate()
+
+  if (loading) {
+    return <Spinner center primary />
+  }
+
   return (
     <div className='container px-6 my-10'>
       <Title center title={'Cars Available in our Inventory'} />

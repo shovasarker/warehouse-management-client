@@ -8,6 +8,7 @@ import SignUp from './pages/signup/SignUp'
 import Blogs from './pages/blogs/Blogs'
 import Home from './pages/home/Home'
 import NotFound from './pages/NotFound'
+import ManageInventories from './pages/ManageInventories'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/manage-inventory' element={<ManageInventories />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/blogs' element={<Blogs />} />
