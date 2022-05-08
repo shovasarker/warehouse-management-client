@@ -31,6 +31,9 @@ const Menu = () => {
           <CustomLink to='/additem' onClick={() => setMenu(false)}>
             Add Item
           </CustomLink>
+          <CustomLink to='/myitems' onClick={() => setMenu(false)}>
+            My Items
+          </CustomLink>
           <Button outlined primary onClick={() => signOut(auth)}>
             Sign Out
           </Button>

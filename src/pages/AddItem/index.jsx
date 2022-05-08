@@ -40,7 +40,7 @@ const AddItem = () => {
       ...data,
       price: price,
       quantity: quantity,
-      supplierName: user?.email,
+      supplierEmail: user?.email,
     })
   }
 
