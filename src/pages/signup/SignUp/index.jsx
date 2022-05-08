@@ -17,7 +17,7 @@ const SignUp = () => {
     }
   }, [token, navigate])
   return (
-    <div className='container px-6'>
+    <div className='container px-6 my-20'>
       <EmailSignUp />
       <SocialLogin />
     </div>

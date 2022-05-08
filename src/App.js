@@ -13,6 +13,7 @@ import ManageItem from './pages/manageitem/ManageItem'
 import RequireAuth from './pages/standalone/RequireAuth'
 import AddItem from './pages/AddItem'
 import MyItems from './pages/MyItems'
+import Footer from './pages/shared/Footer'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path='/blogs' element={<Blogs />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
       <ToastContainer />
     </div>
   )

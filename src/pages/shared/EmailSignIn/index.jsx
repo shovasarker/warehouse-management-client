@@ -51,7 +51,7 @@ const EmailSignIn = () => {
 
   return (
     <form
-      className={`w-full md:w-[450px] mx-auto`}
+      className={`w-full md:w-[450px] mx-auto space-y-4`}
       onSubmit={handleSubmit(onSubmit)}
     >
       <Title center title='Sign In' />
