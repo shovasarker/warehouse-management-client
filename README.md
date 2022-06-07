@@ -2,7 +2,13 @@
 
 ### Live Website url: [https://warehouse-management-ss.web.app/](https://warehouse-management-ss.web.app/)
 
+Warehouse Management Website for managing cars.
+
 ## Features and Functionality :
+
+- Logged in users can add new cars and manage car inventories.
+- Most popular cars shown in the Banner and Brand wise cars shown in the Brand section.
+- Used firebase for authentication (both email and google sign-in were implemented) purposes and MongoDB as a backend database.
 
 - This Project has 10 pages including NotFound Page.
 
